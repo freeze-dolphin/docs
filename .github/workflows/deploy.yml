@@ -20,8 +20,8 @@ jobs:
           sudo mkdocs build
           tree .
 
-#      - name: Deploy
-#        uses: JamesIves/github-pages-deploy-action@4.1.4
-#        with:
-#          branch: gh-pages
-#          folder: ./PVPINBlocklyEditor/dist/
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: site/
