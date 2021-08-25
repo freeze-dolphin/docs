@@ -6,11 +6,7 @@
 
 默认效果预览
 
-<details>
-
 ![预览](img/preview.png)
-
-</details>
 
 ## 配置
 
