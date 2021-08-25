@@ -16,10 +16,12 @@
 
 ### VSC 内配置
 
-- Brightness:
+- Brightness
   亮度, 取值区间为 0.0 到 1.0
-- Disable Glow:
+- Disable Glow
   禁用发光效果
+
+**安装后请不要忘记打开 VSC 控制台并执行指令 `Enable Neon Dream` 来开启霓虹特效**
 
 ### 外部配置
 
@@ -52,7 +54,7 @@
 
 某些配色是写在 SynthWave 自己的配置文件里的
 
-本体应当位于 `用户目录/.vscode/extensions/robbowen.syhthwave-vscode-版本/`
+本体应当位于 `${用户目录}/.vscode/extensions/robbowen.syhthwave-vscode-${版本}/`
 
 你可以在 `themes/` 下找到默认的配色方案并根据需要进行修改
 
@@ -74,4 +76,36 @@
 },
 ```
 
-修改 `settings` 项使其改变
+修改 `settings` 项内容使其改变配色
+
+例如改成
+
+```json
+"settings": {
+	"foreground": "#66ccff",
+	"fontStyle": "bold"
+}
+```
+
+效果如图
+
+![修改后](img/modified.png)
+
+可以通过对比此图与文章开头的默认预览图来直观的比较
+
+**配置生效需要重启窗口**
+
+**打开 VSC 控制台输入 `Reload Window`**
+
+#### 更高级的配置
+
+你可以在插件本体目录的 `src/` 下找到插件实现的代码
+
+如果技术到家你当然可以直接修改代码并 `Reload Window` 来将其调教成你最喜欢的形态
+
+不过这么做就相当于是在编写 VSC 插件了吧!
+
+所以在这里就不细说
+
+可以直接查看如何编写 VSC 主题之类的文章
+
