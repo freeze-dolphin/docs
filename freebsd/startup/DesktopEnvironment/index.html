@@ -8,6 +8,8 @@
       
       
       
+        <meta name="author" content="Freeze Dolphin">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
@@ -137,6 +139,19 @@
 </div>
     
     
+      <div class="md-header__source">
+        
+<a href="https://github.com/freeze-dolphin/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -169,6 +184,19 @@
     </a>
     Delfenite Artifacts
   </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/freeze-dolphin/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -432,8 +460,12 @@
             <article class="md-content__inner md-typeset">
               
                 
+                  <a href="https://github.com/freeze-dolphin/docs/edit/master/docs/freebsd/startup/DesktopEnvironment.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
                 
-                <h1 id="_1">桌面环境</h1>
+                
+                <h1 id="_1">桌面环境<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><em>改编自 <a href="http://blog.nvacg.org/2019/08/29/freebsd-12-0安装kde5桌面环境nuc5i3ryh/">NVACG</a></em></p>
 <blockquote>
 <p>本文基于 <code>Intel NUC5</code> 构建</p>
@@ -441,7 +473,7 @@
 </blockquote>
 <hr />
 <p>所有指令皆以 <code>root</code> 身份执行</p>
-<h2 id="_2">软件安装</h2>
+<h2 id="_2">软件安装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>必要的驱动和软件包</p>
 <table>
 <thead>
@@ -492,7 +524,7 @@
 <hr />
 <pre><code class="language-shell">pkg install -y pam_kde kde5 xorg drm-kmod dbus wqy-fonts sddm xf86-video-intel libva-intel-driver
 </code></pre>
-<h1 id="_3">显卡驱动</h1>
+<h1 id="_3">显卡驱动<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
 <p>软件包<code>drm-kmod</code> 安装后不会默认启用</p>
 <p>首先去 <a href="https://wiki.freebsd.org/Graphics">FreeBSD Wiki</a> 查找你的显卡对应的驱动文件名</p>
 <p>比如老式 <code>AMD</code> 显卡对应的驱动文件名是 <code>radeonkms.ko</code></p>
@@ -500,7 +532,7 @@
 <p>然后修改 <code>rc.conf</code></p>
 <pre><code class="language-shell">echo 'kld_list=&quot;/boot/modules/显卡对应的驱动文件名&quot;' &gt;&gt; /etc/rc.conf
 </code></pre>
-<h2 id="_4">音频驱动</h2>
+<h2 id="_4">音频驱动<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>修改 <code>rc.conf</code> 使声卡驱动随系统启动</p>
 <pre><code class="language-shell">echo 'snd_hda=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
 </code></pre>
@@ -515,7 +547,7 @@ echo &quot;hw.snd.default_unit=1&quot; &gt;&gt; /etc/sysctl.conf
 <p>要查看当前系统的默认输出端口, 可以查看 <code>/etc/sndstat</code> 文件</p>
 <p>另附 <a href="https://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/sound-setup.html">声卡配置文档</a></p>
 <p><em>这部分内容有删减, 具体请见 NVACG 原贴</em></p>
-<h2 id="kde">KDE 桌面</h2>
+<h2 id="kde">KDE 桌面<a class="headerlink" href="#kde" title="Permanent link">&para;</a></h2>
 <p><code>KDE</code> 依赖 <code>procfs</code>, 因此需要修改 <code>fstab</code> 挂载项</p>
 <pre><code class="language-shell">edit /etc/fstab
 </code></pre>
@@ -532,7 +564,7 @@ echo 'hald_enable=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
 <p>为了使系统启动后自动启动会话管理器 <code>sddm</code>, 需要使其随系统启动</p>
 <pre><code class="language-shell">echo 'sddm_enable=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
 </code></pre>
-<h2 id="_5">中文输入</h2>
+<h2 id="_5">中文输入<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>使用指令安装 <code>fcitx</code> 即可</p>
 <pre><code class="language-shell">pkg install -y zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
 </code></pre>
