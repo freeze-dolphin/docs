@@ -1,3 +1,19 @@
 site_name: Delfenite Artifacts
+site_author: Freeze Dolphin
 
-theme: material
+repo_url: https://github.com/freeze-dolphin/docs
+remote_branch: gh-pages
+
+theme: 
+   name: material
+   locale: en
+   highlightjs: true
+
+markdown_extensions:
+   - smarty: {}
+   - toc:
+        permalink: True
+   - sane_lists: {}
+   
+plugins: 
+   - search
