@@ -4,6 +4,9 @@ site_author: Freeze Dolphin
 repo_url: https://github.com/freeze-dolphin/docs
 remote_branch: gh-pages
 
+extra:
+  homepage: https://github.com/freeze-dolphin
+
 theme: 
    name: material
    locale: en
@@ -12,8 +15,12 @@ theme:
 markdown_extensions:
    - smarty: {}
    - toc:
-        permalink: True
+       permalink: True
    - sane_lists: {}
+   - pymdownx.highlight:
+       auto_title: true
+       linenums: true
+   - pymdownx.superfences
    
 plugins: 
    - search
