@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -76,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Delfenite Artifacts" class="md-header__button md-logo" aria-label="Delfenite Artifacts" data-md-component="logo">
+    <a href="https://github.com/freeze-dolphin" title="Delfenite Artifacts" class="md-header__button md-logo" aria-label="Delfenite Artifacts" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -176,7 +176,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Delfenite Artifacts" class="md-nav__button md-logo" aria-label="Delfenite Artifacts" data-md-component="logo">
+    <a href="https://github.com/freeze-dolphin" title="Delfenite Artifacts" class="md-nav__button md-logo" aria-label="Delfenite Artifacts" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -312,6 +312,8 @@
       </a>
       
         
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -428,6 +430,8 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -522,25 +526,30 @@
 </tbody>
 </table>
 <hr />
-<pre><code class="language-shell">pkg install -y pam_kde kde5 xorg drm-kmod dbus wqy-fonts sddm xf86-video-intel libva-intel-driver
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pkg install -y pam_kde kde5 xorg drm-kmod dbus wqy-fonts sddm xf86-video-intel libva-intel-driver
+</code></pre></div>
+</td></tr></table>
 <h1 id="_3">显卡驱动<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
 <p>软件包<code>drm-kmod</code> 安装后不会默认启用</p>
 <p>首先去 <a href="https://wiki.freebsd.org/Graphics">FreeBSD Wiki</a> 查找你的显卡对应的驱动文件名</p>
 <p>比如老式 <code>AMD</code> 显卡对应的驱动文件名是 <code>radeonkms.ko</code></p>
 <hr />
 <p>然后修改 <code>rc.conf</code></p>
-<pre><code class="language-shell">echo 'kld_list=&quot;/boot/modules/显卡对应的驱动文件名&quot;' &gt;&gt; /etc/rc.conf
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;kld_list=&quot;/boot/modules/显卡对应的驱动文件名&quot;&#39;</span> &gt;&gt; /etc/rc.conf
+</code></pre></div>
+</td></tr></table>
 <h2 id="_4">音频驱动<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>修改 <code>rc.conf</code> 使声卡驱动随系统启动</p>
-<pre><code class="language-shell">echo 'snd_hda=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;snd_hda=&quot;YES&quot;&#39;</span> &gt;&gt; /etc/rc.conf
+</code></pre></div>
+</td></tr></table>
 <hr />
 <p>一般台式机需要再执行下面指令</p>
-<pre><code class="language-shell">echo &quot;dev.hdac.0.polling=1&quot; &gt;&gt; /etc/sysctl.conf
-echo &quot;hw.snd.default_unit=1&quot; &gt;&gt; /etc/sysctl.conf
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s2">&quot;dev.hdac.0.polling=1&quot;</span> &gt;&gt; /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;hw.snd.default_unit=1&quot;</span> &gt;&gt; /etc/sysctl.conf
+</code></pre></div>
+</td></tr></table>
 <p><code>hw.snd.default_unit</code> 值在系统启动时自动设置默认输出端口</p>
 <p>一般值为 <code>0</code> 时, 音频自机箱后方 <code>3.5mm</code> 插孔输出</p>
 <p>值为 <code>1</code> 时，音频自机箱前方 <code>3.5mm</code> 插孔输出</p>
@@ -549,31 +558,39 @@ echo &quot;hw.snd.default_unit=1&quot; &gt;&gt; /etc/sysctl.conf
 <p><em>这部分内容有删减, 具体请见 NVACG 原贴</em></p>
 <h2 id="kde">KDE 桌面<a class="headerlink" href="#kde" title="Permanent link">&para;</a></h2>
 <p><code>KDE</code> 依赖 <code>procfs</code>, 因此需要修改 <code>fstab</code> 挂载项</p>
-<pre><code class="language-shell">edit /etc/fstab
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>edit /etc/fstab
+</code></pre></div>
+</td></tr></table>
 <p>添加下面这行, 保存并关闭</p>
-<pre><code class="language-fstab">proc /proc procfs rw 0 0
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Text Only</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>proc /proc procfs rw 0 0
+</code></pre></div>
+</td></tr></table>
 <hr />
 <p>为了使 <code>KDE</code> 支持在普通用户下实现关机、重启功能</p>
 <p>需要启用 <code>dbus</code> 和 <code>hald</code></p>
-<pre><code class="language-shell">echo 'dbus_enable=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
-echo 'hald_enable=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;dbus_enable=&quot;YES&quot;&#39;</span> &gt;&gt; /etc/rc.conf
+<span class="nb">echo</span> <span class="s1">&#39;hald_enable=&quot;YES&quot;&#39;</span> &gt;&gt; /etc/rc.conf
+</code></pre></div>
+</td></tr></table>
 <hr />
 <p>为了使系统启动后自动启动会话管理器 <code>sddm</code>, 需要使其随系统启动</p>
-<pre><code class="language-shell">echo 'sddm_enable=&quot;YES&quot;' &gt;&gt; /etc/rc.conf
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;sddm_enable=&quot;YES&quot;&#39;</span> &gt;&gt; /etc/rc.conf
+</code></pre></div>
+</td></tr></table>
 <h2 id="_5">中文输入<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>使用指令安装 <code>fcitx</code> 即可</p>
-<pre><code class="language-shell">pkg install -y zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
-</code></pre>
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>pkg install -y zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
+</code></pre></div>
+</td></tr></table>
 <hr />
 <p>为了让 <code>fcitx</code> 开机自动启动</p>
 <p>将其启动器放入每个使用 <code>KDE</code> 的用户的 <code>KDE</code> 的启动目录中</p>
-<pre><code class="language-shell">mkdir -p /usr/home/用户名/.config/autostart
+<table class="highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Bash</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>mkdir -p /usr/home/用户名/.config/autostart
 cp /usr/local/share/applications/fcitx.desktop /usr/home/用户名/.config/autostart/
-</code></pre>
+</code></pre></div>
+</td></tr></table>
 <hr />
 <p>推荐 <code>fcitx</code> 皮肤 <a href="https://github.com/Yucklys/fcitx-nord-skin">Yucklys/fcitx-nord-skin: Nord theme for fcitx (github.com)</a></p>
 <p>预览</p>
@@ -652,10 +669,10 @@ cp /usr/local/share/applications/fcitx.desktop /usr/home/用户名/.config/autos
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
