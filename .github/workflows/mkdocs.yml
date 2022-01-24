@@ -1,4 +1,5 @@
-name: Build & Deploy
+
+name: build mkdocs
 
 on:
   push:
@@ -16,10 +17,9 @@ jobs:
 
       - name: Generate MkDocs
         run: |
-          sudo pip install mkdocs mkdocs-material
+          sudo pip install --upgrade pip
+          sudo pip install mkdocs
           sudo mkdocs build
-          tree .
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
